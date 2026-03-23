@@ -1,11 +1,11 @@
-:root{
-    --violet-doux:#6C63FF;
-    --violet-fonce:#534EDD;
-    --orange-vif:#FFA726;
-    --gris-tres-fonce:#333;
+:root {
+    --violet-doux: #6c63ff;
+    --violet-fonce: #534EDD;
+    --orange-vif: #FFA726;
+    --gris-tres-fonce: #333;
     --gris-fonce:#666;
-    --gris-tres-clair:#F8F8F8;
-    --gris-clair:#EEE;    
+    --gris-tres-claire: #f8f8f8;
+    --gris-clair: #EEE;
 }
 
 * {
@@ -14,9 +14,9 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: var(--gris-tres-clair);
-    font-family: roboto,sans-serif;
+body {
+    background-color: var(--gris-tres-claire);
+    font-family:roboto,sans-serif;
     line-height: 1.6;
 }
 
@@ -39,9 +39,9 @@ header div a {
     color: var(--violet-doux);
 }
 
-ul li{
+ul li {
     list-style: none;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 ul {
@@ -57,29 +57,81 @@ ul li a {
     padding: 10px 0;
 }
 
-ul li a:hover{
+ul li a:hover {
     color: var(--violet-doux);
 }
-ul li a::after{
+
+ul li a::after {
     content: '';
     position: absolute;
     left: 0;
     bottom: 0;
-    height: 3px;
+    height: 2.5px;
     width: 0%;
     background-color: var(--violet-doux);
     transition: width 0.3s ease;
 }
 
-ul li a:hover::after {
+ul li a:hover::after{
     width: 100%;
-
 }
 
-a.active {
+a.active{
     color: var(--violet-doux);
 }
 
-a.active::after {
+a.active::after{
     width: 100%;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    text-align: center;
+    margin: 10rem 2rem;
+}
+
+.hero img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid var(--violet-doux);
+
+}
+
+.hero h1{
+    color: var(--violet-doux);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.hero p {
+    color: var(--gris-fonce);
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+
+}
+
+.hero a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, trasform 0.2s ease;
+
+}
+
+.hero a:hover {
+    background-color: var(--violet-fonce);
+    transform: translate(-3px);
 }
